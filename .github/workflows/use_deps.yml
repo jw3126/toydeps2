@@ -15,7 +15,7 @@ jobs:
     - name: Download deps
       uses: actions/download-artifact@v2
       with:
-        name: jw3126/toydeps2/deps
+        name: jw3126/deps
         path: ~/deps.tar.gz
 
     - name: Use deps
