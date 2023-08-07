@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download deps
-      uses: actions/download-artifact@v2
+      # uses: actions/download-artifact@v2
+      uses: dawidd6/action-download-artifact@v2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         workflow: build_deps.yml
