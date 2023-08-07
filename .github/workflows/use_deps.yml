@@ -23,7 +23,7 @@ jobs:
         workflow_conclusion: success
         repo: jw3126/toydeps2
         name: deps
-        path: ~/deps
+        path: deps
 
     - name: Use deps
       run: |

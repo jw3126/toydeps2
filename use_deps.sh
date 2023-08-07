@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ls ~
+echo $PWD
+ls
 
 # tar -xzf ~/deps.tar.gz -C ~/deps
 
