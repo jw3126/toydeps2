@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mkdir ~/.julia
+mkdir -p deps/artifacts
 mv deps/artifacts  ~/.julia/artifacts
 mv deps/compiled   ~/.julia/compiled
 mv deps/packages   ~/.julia/packages
