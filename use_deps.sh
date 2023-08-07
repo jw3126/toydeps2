@@ -1,8 +1,6 @@
 #!/bin/bash
 
-ls
 ls ~
-ls ~/deps
 
 # tar -xzf ~/deps.tar.gz -C ~/deps
 
