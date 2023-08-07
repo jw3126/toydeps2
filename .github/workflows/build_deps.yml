@@ -1,12 +1,12 @@
 name: Build deps
 
-on:
-  workflow_dispatch:
-    inputs: 
-      unused:
-        description: 'unused dummy input'
-        required: false
-        default: "unused"
+on: [push]
+  # workflow_dispatch:
+  #   inputs: 
+  #     unused:
+  #       description: 'unused dummy input'
+  #       required: false
+  #       default: "unused"
 
 jobs:
   build-and-upload:
