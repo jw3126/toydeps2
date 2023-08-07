@@ -18,16 +18,5 @@ jobs:
         name: jw3126/toydeps/deps
         path: ~/deps.tar.gz
 
-    - name: Unpack deps
-      run: |
-        tar -xzf ~/deps.tar.gz -C ~/deps
-        mkdir ~/.julia
-        mv ~/deps/artifacts  ~/.julia/artifacts
-        mv ~/deps/compiled   ~/.julia/compiled
-        mv ~/deps/packages   ~/.julia/packages
-        mv ~/deps/registries ~/.julia/registries
-        mv ~/deps/julia      ~/julia
-
-    - name: Use julia
-      run: |
-        juila -e 'using Pkg; Pkg.add("Accessors"); using Accessors'
+    - name: Use deps
+      run: ./use_deps.yml
