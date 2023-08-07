@@ -15,7 +15,8 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v2
       - name: "Build deps"
-        run: build_deps.sh
+        run: |
+          ./build_deps.sh
 
       - name: "Upload deps"
         uses: actions/upload-artifact@v2

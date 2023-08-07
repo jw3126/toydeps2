@@ -1,7 +1,5 @@
 #!/bin/bash
 
-mkdir deps
-
 echo "Download julia"
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.9/julia-1.9.2-linux-x86_64.tar.gz
 tar -xf julia-1.9.2-linux-x86_64.tar.gz
