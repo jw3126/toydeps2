@@ -28,4 +28,4 @@ cp -r ~/.julia/artifacts deps/artifacts
 cp -r ~/.julia/packages deps/packages
 cp -r ~/.julia/compiled deps/compiled
 cp -r ~/.julia/registries deps/registries
-tar -czf deps.tar.gz deps
+tar -czf ~/deps.tar.gz deps
