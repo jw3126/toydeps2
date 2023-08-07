@@ -1,0 +1,24 @@
+name: Build deps
+
+on:
+  workflow_dispatch:
+    inputs: 
+      unused:
+        description: 'unused dummy input'
+        required: false
+        default: "unused"
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+      - name: "Build deps"
+        run: build_deps.sh
+
+      - name: "Upload deps"
+        uses: actions/upload-artifact@v2
+        with:
+          name: deps
+          path: ~/deps.tar.gz

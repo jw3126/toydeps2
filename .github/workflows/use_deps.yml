@@ -1,0 +1,33 @@
+name: use deps
+
+on:
+  workflow_dispatch:
+    inputs: 
+      unused:
+        description: 'unused dummy input'
+        required: false
+        default: "unused"
+
+jobs:
+  doit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download deps
+      uses: actions/download-artifact@v2
+      with:
+        name: jw3126/toydeps/deps
+        path: ~/deps.tar.gz
+
+    - name: Unpack deps
+      run: |
+        tar -xzf ~/deps.tar.gz -C ~/deps
+        mkdir ~/.julia
+        mv ~/deps/artifacts  ~/.julia/artifacts
+        mv ~/deps/compiled   ~/.julia/compiled
+        mv ~/deps/packages   ~/.julia/packages
+        mv ~/deps/registries ~/.julia/registries
+        mv ~/deps/julia      ~/julia
+
+    - name: Use julia
+      run: |
+        juila -e 'using Pkg; Pkg.add("Accessors"); using Accessors'
