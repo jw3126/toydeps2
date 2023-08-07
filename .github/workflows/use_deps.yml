@@ -24,4 +24,4 @@ jobs:
         path: ~/deps.tar.gz
 
     - name: Use deps
-      run: ./use_deps.yml
+      run: ./use_deps.sh
