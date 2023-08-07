@@ -20,11 +20,11 @@ using PyCall
 HERE_JULIA
 
 echo "Creating Github Artifact"
-rm -rf deps
-mkdir deps
+rm -rf ~/deps
+mkdir ~/deps
 mkdir -p ~/.julia/artifacts # make sure it exists to avoid error
-cp -r ~/julia deps/julia
-cp -r ~/.julia/artifacts deps/artifacts
-cp -r ~/.julia/packages deps/packages
-cp -r ~/.julia/compiled deps/compiled
-cp -r ~/.julia/registries deps/registries
+cp -r ~/julia             ~/deps/julia
+cp -r ~/.julia/artifacts  ~/deps/artifacts
+cp -r ~/.julia/packages   ~/deps/packages
+cp -r ~/.julia/compiled   ~/deps/compiled
+cp -r ~/.julia/registries ~/deps/registries
