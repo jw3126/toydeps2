@@ -1,10 +1,11 @@
 #!/bin/bash
 
-ls ~
-echo $PWD
+echo pwd
+pwd
+echo ls
 ls
-
-# tar -xzf ~/deps.tar.gz -C ~/deps
+echo ls deps
+ls deps
 
 # mkdir ~/.julia
 # mv ~/deps/artifacts  ~/.julia/artifacts
