@@ -10,4 +10,4 @@ mv deps/julia      ~/julia
 export PATH=~/julia/bin:$PATH
 
 echo "Running julia"
-juila -e 'using Pkg; Pkg.add("PyCall"); using PyCall'
+julia -e 'using Pkg; Pkg.add("PyCall"); using PyCall'
