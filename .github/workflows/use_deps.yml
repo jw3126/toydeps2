@@ -12,6 +12,8 @@ jobs:
   doit:
     runs-on: ubuntu-latest
     steps:
+    - name: "Checkout"
+      uses: actions/checkout@v2
     - name: Download deps
       # uses: actions/download-artifact@v2
       uses: dawidd6/action-download-artifact@v2
